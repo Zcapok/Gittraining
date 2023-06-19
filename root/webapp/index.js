@@ -1,14 +1,9 @@
 sap.ui.define([
-    "sap/m/Button",
-    'sap/m/MessageToast'
-], function(Button, MessageToast) {
-    'use strict';
+	"sap/ui/core/mvc/XMLView"
+], function (XMLView) {
+	"use strict";
 
-    new Button({
-        Text: "Ready....",
-        press: function(){
-            MessageToast.show("Hello World!");
-        }
-    }).placeAt("content");
-    
+	XMLView.create({viewName: "Quickstart.App"}).then(function (oView) {
+		oView.placeAt("content");
+	});
 });
